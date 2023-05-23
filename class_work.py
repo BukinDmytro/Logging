@@ -14,3 +14,14 @@ try:
 except Exception:
     logging.exception("Fignya")
 
+#факторіал числа
+
+def factorial(n):
+    logging.info(f"Розпочато обчислення факторіалу числа {n}")
+    result = 1
+    for i in range(1,n + 1):
+        result *= i
+    logging.info(f"Завершено обчислення факторіалу числа {n}. Результат = {result}")
+    return result
+logging.basicConfig(level = logging.INFO)
+print(factorial(5))
